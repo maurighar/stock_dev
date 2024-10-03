@@ -1,0 +1,73 @@
+table,
+td {
+	border: 1px solid silver;
+
+}
+
+table {
+	border-collapse: collapse;
+	margin: 25px auto;
+	/* width: 95%; */
+	/*max-width: 95%;*/
+}
+
+thead th,
+tfoot td {
+	background: #474747;
+	font-weight: bold;
+	color: #fff;
+}
+
+th, td {
+	vertical-align: central;
+	font-family: Tahoma;
+	font: 0.7em;
+	padding: 3px ;
+}
+
+td.pinta_rojo {
+	background-color: #FF0000;
+}
+
+td.pinta_verde {
+	background-color: #5EB05B;
+}
+
+td.dcha {
+	text-align: right;
+}
+
+td.centrar {
+	text-align: center;
+}
+
+td.dominioLista {
+	width: 140px;
+	font-family: Courier;
+}
+
+
+td.estado {
+	width: 70px;
+}
+
+tr:nth-child(2n+1)  {
+	background: #DFFFFF;
+}
+
+tr:nth-child(2n+0)  {
+	background: #FFF;
+}
+
+tbody tr:hover {
+	background: #BDC3C7;
+}
+
+
+thead .fechas {
+	width: 60px;
+}
+
+.al_derecha {
+	text-align: right;
+}

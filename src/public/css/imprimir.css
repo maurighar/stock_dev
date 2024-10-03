@@ -1,0 +1,26 @@
+.imprimir {
+	display: none;
+}
+
+.firma {
+	border-width: 2px 0 0 0;
+	border-style: dashed;
+	text-align: center;
+	width: 200px;
+}
+
+@media print {
+	header {
+		padding: 0;
+	}
+
+	.imprimir {
+		display: inline;
+	}
+
+	nav, .noprint {
+		display: none;
+	}
+
+}
+

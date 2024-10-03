@@ -1,0 +1,29 @@
+<?php
+
+
+/** El sistema esta trabajando en modo local */
+define('MODO_LOCAL', true);
+
+define('RAIZ_SITIO', '/stock_dev/src/');
+
+/*#############################################
+
+	Configuración general de la base de datos
+
+###############################################*/
+
+/** El nombre de tu base de datos */
+define('DB_NAME', 'finanzas');
+
+/** Tu nombre de usuario de MySQL */
+define('DB_USER', 'aprocam');
+
+/** Tu contraseña de MySQL */
+define('DB_PASSWORD', 'aprocam2010');
+
+/** Host de MySQL (es muy probable que no necesites cambiarlo) */
+if (MODO_LOCAL){
+	define('DB_HOST', 'localhost');
+} else {
+	define('DB_HOST', '192.168.2.199');
+}

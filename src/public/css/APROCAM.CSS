@@ -1,0 +1,48 @@
+body {
+    background: #eee url('../img/logo.png') no-repeat;
+    margin: 10px;
+    font-family: tahoma;
+}
+h1 {
+    font-size: 30px;
+    text-align: center;
+}
+h2 {
+    font-size: 20px;
+}
+h3 {
+    font-size: 15px;
+    margin: 0;
+}
+p, li {
+    font-size: 15px;
+}
+table, td {
+    border: 0;
+}
+.resaltado, .resaltadoamarillo {
+    border: 2px solid #333;
+    margin: 5px auto;
+    width: 70%;
+    padding: 10px;
+}
+.resaltado {
+    background: white;
+}
+.resaltadoamarillo {
+    background: yellow;
+    font-size: 20px;
+}
+.resaltadoamarillo p {
+    font-size: 20px;
+    margin: 0;
+}
+.piedepagina {
+    border: 2px solid #333;
+    margin: 5px auto;
+    width: 70%;
+    padding: 10px;
+}
+.piedepagina p {
+    margin: 0;
+}
