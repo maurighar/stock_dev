@@ -141,7 +141,7 @@ a.enlace_boton:hover  {
 
 .mensaje_mal,
 .mensaje_ok,
-.mensaje_verde {
+.mensaje_correcto {
 	background: yellow;
 	border-radius: 0.5em;
 	color: #000;
@@ -157,7 +157,7 @@ a.enlace_boton:hover  {
 	color: yellow;
 	font-size: 2em;
 }
-.mensaje_verde{
+.mensaje_correcto{
 	background: green;
 	color: #fff;
 	font-size: 2em;

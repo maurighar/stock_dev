@@ -13,7 +13,7 @@ define('RAIZ_SITIO', '/stock_dev/src/');
 ###############################################*/
 
 /** El nombre de tu base de datos */
-define('DB_NAME', 'finanzas');
+define('DB_NAME', 'gest_stock');
 
 /** Tu nombre de usuario de MySQL */
 define('DB_USER', 'aprocam');
@@ -25,5 +25,5 @@ define('DB_PASSWORD', 'aprocam2010');
 if (MODO_LOCAL){
 	define('DB_HOST', 'localhost');
 } else {
-	define('DB_HOST', '192.168.2.199');
+	define('DB_HOST', 'localhost');  // dirección del servidor
 }

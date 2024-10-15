@@ -10,7 +10,7 @@ function sitio() {
 
 // -----------------------------
 
-function render_template(string $template, array $data = []){
+function render_template(string $template, array $data = [], $dir_raiz = '.'){
 	extract($data);
-	require "templates/$template.php";
+	require "$dir_raiz/templates/$template.php";
 }

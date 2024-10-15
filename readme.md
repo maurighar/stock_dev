@@ -1,1 +1,1 @@
-Sistema para administrar los gastos personales.
+Sistema para administrar un stock.

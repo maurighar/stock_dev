@@ -11,10 +11,8 @@ render_template('header', $data);
 
 <div class="container2col">
     <div>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni
-        eius nam vel non, facilis nihil neque velit, nemo, eum officiis
-        voluptatibus cumque! Fugiat tempora facere quos? Expedita
-        deserunt nulla incidunt.
+        <p>Artículos</p>
+        <a class="enlace_boton" href="articulos/index.php">Entrar</a>
     </div>
     <div>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni
