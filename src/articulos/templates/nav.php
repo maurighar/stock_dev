@@ -6,13 +6,17 @@
 		</ul>
 
 		<div class="version">
-			<a href="<?php sitio(); ?>login.php">Login</a>
 			<?php
-			// if ($_SESSION["autentificado"] = 'SI') {
-			//  	echo $_SESSION["usuario"]. '  ';
-			// } else {
-			// 	echo '<a href="' . RAIZ_SITIO . 'sistema/login.php"></a>  ';
-			// }
+			//-----------------------------------------------
+			// indico si la session esta inciada
+			// session_start();
+			if (isset($_SESSION['user_id'])) {
+				echo '(' . $_SESSION["user_name"]. '/<a href="' . RAIZ_SITIO . 'cerrarSecion.php">Cerrar</a>) ';
+			} else {
+				echo '<a href="' . RAIZ_SITIO . 'login.php">Login</a>  ';
+			}
+			//-----------------------------------------------
+
 			echo date("D  d-m-Y");
 			?>
 			<br>

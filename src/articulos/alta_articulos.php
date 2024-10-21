@@ -6,6 +6,8 @@ $data = [
     ];
 
 render_template('header', $data,'..');
+require_once '../sys/seguridad.php';
+
 ?>
 
 <?php
@@ -36,15 +38,6 @@ if (isset($_GET['id'])) {
 } elseif($_SERVER['REQUEST_METHOD']=='POST'){
     /*   Validaciones de datos    */
     $errores = array();
-
-    // if (empty($email)){ 
-    //     $errores['email'] = 'Insertar email.'; 
-    // } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)){
-    //     $errores['email'] = 'Formato de email incorrecto.'; 
-    // }
-    // if (empty($pass)){
-    //     $errores['password'] = 'La contraseña es obligatoria.'; 
-    // }
 
     $db_articulos->setId(isset($_POST['id'])?$_POST['id']:0);
     $db_articulos->setCodigo(isset($_POST['codigo'])?htmlspecialchars($_POST['codigo']):'');

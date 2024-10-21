@@ -1,6 +1,7 @@
 <?php
 require_once 'sys/funciones.php';
 
+
 $data = [
         'titulo_pagina' => 'Finanzas - Login'
     ];
@@ -9,10 +10,7 @@ render_template('header', $data);
 
 $year_post = isset($_POST['year'])?intval($_POST['year']):intval(date("Y"));
 
-if($_SERVER['REQUEST_METHOD']=='POST'){
-    
-    var_dump($_POST);
-    
+if($_SERVER['REQUEST_METHOD']=='POST'){    
     /*   Validaciones de datos    */
     $errores = array();
 
@@ -30,41 +28,28 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     }
 
     if (empty($errores)){
-        include "sys/conecta_db.php";
-        try {
-            $sql = "SELECT * FROM usuarios WHERE email = :email;";
+        require_once 'sys/db_usuarios.php';
+        $db_usuarios = new Db_usuarios();
+        $db_usuarios->setEmail($email);
 
-            $sentencia = $pdo->prepare($sql);
-            $sentencia->execute(array(
-                ':email' => $email
-            ));
-
-            $usuarios = $sentencia->fetchAll(PDO::FETCH_ASSOC);
-            foreach ($usuarios as $user) {
-                if (password_verify($pass, $user['password'])){
-                    session_start();
-                    $_SESSION['user_id'] = $user['id'];
-                    $_SESSION['user_name'] = $user['nombre'];
-                    header('Location:indice.php');
-                }
+        $usuarios = $db_usuarios->getByEmail();
+        foreach ($usuarios as $user) {
+            if (password_verify($pass, $user['password'])){
+                session_start();
+                $_SESSION['user_id'] = $user['id'];
+                $_SESSION['user_name'] = $user['nombre'];
+                header('Location:index.php');
             }
-            // header('Location:login.html');
-
-        }catch(PDOException $e){
-            echo 'Error de conexión: ' . $e->getMessage() . '<br/>';
         }
+
     } else {
         // mostrar los errores
         foreach ($errores as $key => $value) {
             echo "$value<br>";
         }
-        echo '<a href="login.html">Regresar</a>';
+        // echo '<a href="login.html">Regresar</a>';
     }
     
-
-
-
-
 
 }
 ?>
@@ -103,7 +88,6 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         </div>
 
         <input type="submit" class="btn btn-primary" value="Iniciar Seción">
-        <!-- <a href="registro.html" class="btn btn-secondary">Registro</a> -->
     </form>
 </div>
 <div></div>

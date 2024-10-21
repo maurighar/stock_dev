@@ -1,7 +1,6 @@
 <?php
-session_start();
-
 if (!isset($_SESSION['user_id'])) {
-    header("location:login.html");
+    $raiz = RAIZ_SITIO;
+    header("location:" . $raiz . "login.php");
     exit();
 }
