@@ -35,8 +35,8 @@ $datos = $db_articulos->get_all();
         <td><?=$value['precio']?></td>
         <td><?=$value['cantidad']?></td>
         <td>
-        <a href="alta_articulos.php?id=<?php echo $value['id']?>" class="btn-2">Editar </a> /
-        <a href="eliminar.php?id=<?php echo $value['id']?>&req=delete" class="btn-1">Eliminar</a>
+        <a href="alta_articulos.php?id=<?php echo $value['id']?>" class="btn-Editar">Editar </a> /
+        <a href="eliminar_articulos.php?id=<?php echo $value['id']?>" class="btn-Eliminar">Eliminar</a>
 
         </td>
     </tr>
