@@ -38,7 +38,7 @@ session_start();
 
 <body onload="inicializar()">
 
-	<?php render_template('nav'); ?>
+	<?php render_template('nav',[],$directorio_de_raiz); ?>
 
 	<header>
 		<div class="encabezado">
