@@ -3,7 +3,7 @@ require_once 'sys/funciones.php';
 
 
 $data = [
-        'titulo_pagina' => 'Finanzas - Login'
+        'titulo_pagina' => 'Stock - Login'
     ];
 
 render_template('header', $data);
@@ -53,47 +53,49 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
 }
 ?>
-<h1>Login</h1>
+<h1 class="title is-3">Login</h1>
 
 
-<div class="container3col">
 
-<div></div>    
-<div class="cuadro_gris">
+
+<div id="CargaDatos"  class="box">
     <form action="login.php" method="post">
+        <div class="fixed-grid">
+            <div class="grid is-col-min-14 is-row-gap-0.5">
 
-        <div class="mb-3">
-            <label>Email</label>
-            <input
-                type="email"
-                class="form-control"
-                name="email"
-                id="email"
-                placeholder="Correo electronico"
-                required
-            />
+                <div class="field">
+                        <label class="label">E-Mail</label>
+                        <div class="control">
+                            <input class="input"
+                                type="email"
+                                class="form-control"
+                                name="email"
+                                id="email"
+                                placeholder="Correo electronico"
+                                required
+                            />
+                        </div>
+                </div>
+
+                <div class="field">
+                        <label class="label">Password</label>
+                        <div class="control">
+                            <input class="input"
+                                type="password"
+                                class="form-control"
+                                name="password"
+                                id="password"
+                                placeholder="Contraseña"
+                                required
+                            />
+                        </div>
+                </div>
+
+            </div>
+            <button type="submit" class="button is-success">Iniciar Seción</button>
         </div>
-
-
-        <div class="mb-3">
-            <label>
-            <input
-                type="password"
-                class="form-control"
-                name="password"
-                id="password"
-                placeholder="Contraseña"
-                required
-            />
-        </div>
-
-        <input type="submit" class="btn btn-primary" value="Iniciar Seción">
     </form>
 </div>
-<div></div>
 
-</div>
-
-<div class="container3col"></div>
 
 <?php render_template('footer')?>

@@ -16,6 +16,7 @@
 		<div class="navbar-start">
 			<a class="navbar-item" href="<?php sitio(); ?>articulos/index.php">Articulos</a>
 			<a class="navbar-item" href="<?php sitio(); ?>proveedores/index.php">Proveedores</a>
+			<a class="navbar-item" href="<?php sitio(); ?>clientes/index.php">Clientes</a>
 		</div>
 	</div>
 
