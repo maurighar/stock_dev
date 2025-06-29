@@ -11,12 +11,13 @@
 }*/
 
 body {
-	font: 0.7em Verdana,Tahoma;
-	background: #D8D8D8;
+	/* font: 0.7em Verdana,Tahoma;
+	background: #D8D8D8; */
+	margin: 0px 5px;
+	width: 95%;
 	padding: 0;
-	margin: 0;
 }
-
+`
 a:link,
 a:visited,
 a:hover {
@@ -333,4 +334,22 @@ p.resaltarx2{
 	margin: 10px;
 	background-color: rgb(212, 221, 217);
 	border: 2px solid grey;
+}
+
+
+
+@media print {
+	header {
+		padding: 0;
+	}
+
+	.imprimir {
+		display: inline;
+	}
+
+	nav,
+	.noprint {
+		display: none;
+	}
+
 }

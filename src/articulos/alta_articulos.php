@@ -20,9 +20,9 @@ require_once("../sys/connect_db.php");
 $db_articulos = new Db_articulos();
 
 if (isset($_GET['id'])) {
-    echo '<h1>Modificación Artículos</h1>';
+    echo '<h1 class="title is-3">Modificación Artículos</h1>';
 } else {
-    echo '<h1>Alta Artículos</h1>';
+    echo '<h1 class="title is-3">Alta Artículos</h1>';
 }
 
 
@@ -64,59 +64,74 @@ if (isset($_GET['id'])) {
 
 ?>
 
+<div id="CargaDatos"  class="box">
+    <form action="alta_articulos.php" method="post">
+        <div class="fixed-grid">
+            <div class="grid is-col-min-14 is-row-gap-0.5">
+                <div class="field">
+                    <label class="label">Código</label>
+                    <div class="control">
+                        <input class="input"
+                                type="text"
+                                name="codigo"
+                                id="codigo"
+                                placeholder="Código del articulo"
+                                <?= isset($retorno_codigo)?'value=' . $retorno_codigo :''  ?>
+                                required
+                            />
+                    </div>
+                </div>
 
-<form action="alta_articulos.php" method="post">
-    <div class="container2col">
-        <div>
-            <label>Código</label>
-            <input
-                type="text"
-                name="codigo"
-                id="codigo"
-                placeholder="Código del articulo"
-                <?= isset($retorno_codigo)?'value=' . $retorno_codigo :''  ?>
-                required
-            />
-        </div>
-        <div>
-            <label>Descripción</label>
-            <input
-                type="text"
-                name="descripcion"
-                id="descripcion"
-                placeholder="Descripción del articulo"
-                required
-                <?= isset($retorno_descripcion)?'value=' . $retorno_descripcion :''  ?>
-            />
-        </div>
-        <div>
-            <label>Precio</label>
-            <input
-                type="number"
-                name="precio"
-                id="precio"
-                placeholder="Precio del articulo"
-                <?= isset($retorno_precio)?'value=' . $retorno_precio :''  ?>
-                required
-            />
-        </div>
-        <div>
-            <label>Cantidad</label>
-            <input
-                type="number"
-                name="cantidad"
-                id="cantidad"
-                min=0
-                placeholder="Cantidad del articulo"
-                <?= isset($retorno_cantidad)?'value=' . $retorno_cantidad :''  ?>
-                required
-            />
-        </div>
-    </div>
-    <?= isset($_GET['id'])?'<input type="hidden" name="id" value="' . $_GET['id'] . '">':'' ?>
-    <input type="submit" value="Guardar">
-</form>
+                <div class="field">
+                    <label class="label">Descripción</label>
+                    <div class="control">
+                        <input class="input"
+                            type="text"
+                            name="descripcion"
+                            id="descripcion"
+                            placeholder="Descripción del articulo"
+                            required
+                            <?= isset($retorno_descripcion)?'value=' . $retorno_descripcion :''  ?>
+                        />
+                    </div>
+                </div>
 
+                <div class="field">
+                    <label class="label">Precio</label>
+                    <div class="control">
+                        <input class="input"
+                            type="number"
+                            name="precio"
+                            id="precio"
+                            placeholder="Precio del articulo"
+                            <?= isset($retorno_precio)?'value=' . $retorno_precio :''  ?>
+                            required
+                        />
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Cantidad</label>
+                    <div class="control">
+                        <input class="input"
+                            type="number"
+                            name="cantidad"
+                            id="cantidad"
+                            min=0
+                            placeholder="Cantidad del articulo"
+                            <?= isset($retorno_cantidad)?'value=' . $retorno_cantidad :''  ?>
+                            required
+                        />
+                    </div>
+                </div>
+
+                <?= isset($_GET['id'])?'<input type="hidden" name="id" value="' . $_GET['id'] . '">':'' ?>
+
+            </div>
+            <button type="submit" class="button is-success">Grabar</button>
+        </div>
+    </form>
+</div>
 
 
 <?php render_template('footer',[],'..')?>

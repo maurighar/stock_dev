@@ -16,11 +16,8 @@ session_start();
 	<meta name="author" content="Mauricio Antonio Ghilardi" />
 
 	<link rel="stylesheet" href="<?php sitio(); ?>public/css/normalize.css" />
-	<link rel="stylesheet" href="<?php sitio(); ?>public/css/menu.css" />
-	<link rel="stylesheet" href="<?php sitio(); ?>public/css/table.css" />
-	<link rel="stylesheet" href="<?php sitio(); ?>public/css/input.css" />
-	<link rel="stylesheet" href="<?php sitio(); ?>public/css/imprimir.css" />
 	<link rel="stylesheet" href="<?php sitio(); ?>public/css/main.css" />
+    <link rel="stylesheet" href="<?php sitio(); ?>public/css/bulma.min.css" />
 
 	<script src="<?php sitio(); ?>public/js/main.js"> </script>
 
@@ -40,10 +37,10 @@ session_start();
 
 	<?php
 	// render_template('nav',[],$directorio_de_raiz); 
-	require sitio() . "$dir_raiz/templates/$template.php";
+	require "$dir_raiz/templates/nav.php";
 	?>
 
-
+<br><br>
 	<header>
 		<div class="encabezado">
 			<a href="<?php sitio(); ?>">

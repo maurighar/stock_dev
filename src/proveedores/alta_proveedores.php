@@ -20,9 +20,9 @@ require_once("../sys/db_proveedores.php");
 $db_proveedores = new db_proveedores();
 
 if (isset($_GET['id'])) {
-    echo '<h1>Modificación Proveedores</h1>';
+    echo '<h1 class="title is-3">Modificación Proveedores</h1>';
 } else {
-    echo '<h1>Alta Proveedores</h1>';
+    echo '<h1 class="title is-3">Alta Proveedores</h1>';
 }
 
 
@@ -65,56 +65,78 @@ if (isset($_GET['id'])) {
 ?>
 
 
-<form action="alta_proveedores.php" method="post">
-    <div class="container2col">
-        <div>
-            <label>Nombre</label>
-            <input
-                type="text"
-                name="nombre"
-                id="nombre"
-                placeholder="Nombre"
-                <?= isset($retorno_nombre)?'value=' . $retorno_nombre :''  ?>
-                required
-            />
-        </div>
-        <div>
-            <label>CUIT</label>
-            <input
-                type="text"
-                name="cuit"
-                id="cuit"
-                placeholder="CUIT"
-                required
-                <?= isset($retorno_cuit)?'value=' . $retorno_cuit :''  ?>
-            />
-        </div>
-        <div>
-            <label>E-mail</label>
-            <input
-                type="text"
-                name="email"
-                id="email"
-                placeholder="Email"
-                <?= isset($retorno_email)?'value=' . $retorno_email :''  ?>
-                
-            />
-        </div>
-        <div>
-            <label>Teléfono</label>
-            <input
-                type="text"
-                name="telefono"
-                id="telefono"
-                min=0
-                placeholder="Teléfono"
-                <?= isset($retorno_telefono)?'value=' . $retorno_telefono :''  ?>
-                
-            />
-        </div>
-    </div>
+<div id="CargaDatos"  class="box">
+    <form action="alta_proveedores.php" method="post">
     <?= isset($_GET['id'])?'<input type="hidden" name="id" value="' . $_GET['id'] . '">':'' ?>
-    <input type="submit" value="Guardar">
+        <div class="fixed-grid">
+            <div class="grid is-col-min-14 is-row-gap-0.5">
+
+
+                <div class="field">
+                    <label class="label">Nombre</label>
+                    <div class="control">
+                        <input class="input"
+                            type="text"
+                            name="nombre"
+                            id="nombre"
+                            placeholder="Nombre"
+                            <?= isset($retorno_nombre)?'value=' . $retorno_nombre :''  ?>
+                            required
+                        />
+                    </div>
+                </div>
+
+
+                <div class="field">
+                    <label class="label">CUIT</label>
+                    <div class="control">
+                        <input class="input"
+                            type="text"
+                            name="cuit"
+                            id="cuit"
+                            placeholder="CUIT"
+                            required
+                            <?= isset($retorno_cuit)?'value=' . $retorno_cuit :''  ?>
+                        />
+                    </div>
+                </div>
+
+
+                <div class="field">
+                    <label class="label">E-mail</label>
+                    <div class="control">
+                        <input class="input"
+                            type="text"
+                            name="email"
+                            id="email"
+                            placeholder="Email"
+                            <?= isset($retorno_email)?'value=' . $retorno_email :''  ?>
+                            
+                        />
+                    </div>
+                </div>
+
+
+                <div class="field">
+                    <label class="label">Teléfono</label>
+                    <div class="control">
+                        <input class="input"
+                            type="text"
+                            name="telefono"
+                            id="telefono"
+                            min=0
+                            placeholder="Teléfono"
+                            <?= isset($retorno_telefono)?'value=' . $retorno_telefono :''  ?>
+                            
+                        />
+                    </div>
+                </div>
+
+
+
+            </div>
+            <button type="submit" class="button is-success">Grabar</button>
+        </div>
 </form>
 
 
