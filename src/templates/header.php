@@ -38,7 +38,11 @@ session_start();
 
 <body onload="inicializar()">
 
-	<?php render_template('nav',[],$directorio_de_raiz); ?>
+	<?php
+	// render_template('nav',[],$directorio_de_raiz); 
+	require sitio() . "$dir_raiz/templates/$template.php";
+	?>
+
 
 	<header>
 		<div class="encabezado">

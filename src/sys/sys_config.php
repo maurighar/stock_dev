@@ -16,10 +16,10 @@ define('RAIZ_SITIO', '/stock_dev/src/');
 define('DB_NAME', 'gest_stock');
 
 /** Tu nombre de usuario de MySQL */
-define('DB_USER', 'aprocam');
+define('DB_USER', 'root');
 
 /** Tu contraseña de MySQL */
-define('DB_PASSWORD', 'aprocam2010');
+define('DB_PASSWORD', '');
 
 /** Host de MySQL (es muy probable que no necesites cambiarlo) */
 if (MODO_LOCAL){

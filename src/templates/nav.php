@@ -2,6 +2,7 @@
 		<ul class="menus" role="navigation">
 			<li><a href="<?php sitio(); ?>">#</a></li>
 			<li><a href="<?php sitio(); ?>articulos/index.php">Articulos</a></li>
+			<li><a href="<?php sitio(); ?>proveedores/index.php">Proveedores</a></li>
 			<!-- <li>
 				<a href="<?php sitio(); ?>sistema/rechazos.php?tipo=solucionado">Rechazados</a>
 				<ul class="menus">
